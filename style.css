@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+}
+.parent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 30px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.head-1,
+.head-2,
+.head-3,
+.head-4 {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.search-simple {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+}
+
+.search-simple:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+.search-simple input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+.search-simple button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.search-simple button:hover {
+  transform: scale(1.05);
+}
+.bottom-search {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.first,
+.second {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.first input,
+.second input {
+  width: 400px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+#suggestions,
+#sujjestions1 {
+  width: 400px;
+  background: white;
+  color: black;
+  border-radius: 6px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+#suggestions li,
+#sujjestions1 li {
+  padding: 10px;
+  cursor: pointer;
+}
+#suggestions li:hover,
+#sujjestions1 li:hover {
+  background: #e6e6e6;
+}
+@media (max-width: 768px) {
+  .head-1,
+  .head-2,
+  .head-3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first input,
+  .second input,
+  #suggestions,
+  #sujjestions1 {
+    width: 90%;
+  }
+}
